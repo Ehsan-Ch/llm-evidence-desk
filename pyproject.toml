@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-evidence-desk"
+version = "1.0.0"
+description = "Local LLM retrieval, source-checked quotations, and transparent evaluation"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+evidence-desk = "evidence_desk.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["evidence_desk*"]
+
+[tool.setuptools.package-data]
+evidence_desk = ["*.html", "data/*.json"]
